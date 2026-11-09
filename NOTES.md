@@ -35,7 +35,7 @@ What I tried:
 
     - Optimizers: Testing different optimizers, revealed that Adam had the best results.
 
-    - SInce we were told not to modify the main function, I instead added data augmentation directly into the get_model function. I used layers for random rotation, zoom, translation, brightness adjustment, and contrast adjustment. I choose these augmentations as this is how traffic signs often can look different in the real world. The performance decreases slightly and the training time increased significantly. I thought about keeping them, as they could make the model more robus, so it would more consistently have high accuracy if trained many times. However, I decided to remove them as the my model seems to be very robust even without data augmentation.
+    - Data augmentation: I added augmentation layers directly into the get_model function. I used layers for random rotation, zoom, translation, brightness adjustment, and contrast adjustment. I choose these augmentations as this is how traffic signs often can look different in the real world. The performance decreases slightly and the training time increased significantly. I thought about keeping them, as they could make the model more robus, so it would more consistently have high accuracy if trained many times. However, I decided to remove them as the my model seems to be very robust even without data augmentation.
 
     - When I added more layers, I saw an improved performance until the input dimensions became too small for additional 3x3 filters. I tried adding padding and even more layers, but the performance decreased, so this seemed to be a good balance of complexity and performance.
 
